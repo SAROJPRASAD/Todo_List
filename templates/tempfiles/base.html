@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'app-css/home.css' %}">
+</head>
+<body>
+    <section id="nav">
+        <nav>
+            <div id="subnav">
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'alltodos' %}">TO DO LIST</a>
+            <a href="">HISTORY</a>
+            <a href="">CONTACT</a>
+            </div>
+            <span>
+                <form action="search">search</form>
+            </span>
+        </nav>
+    </section>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
